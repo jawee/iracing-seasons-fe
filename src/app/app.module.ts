@@ -12,6 +12,7 @@ import { RaceComponent } from './race/race.component';
 import { RaceListComponent } from './race-list/race-list.component';
 import { RaceRowComponent } from './race-row/race-row.component';
 import { SeasonListComponent } from './season-list/season-list.component';
+import { SeasonComponent } from './season/season.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SeasonListComponent } from './season-list/season-list.component';
     RaceComponent,
     RaceListComponent,
     RaceRowComponent,
-    SeasonListComponent
+    SeasonListComponent,
+    SeasonComponent
   ],
   imports: [
     BrowserModule,

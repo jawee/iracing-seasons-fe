@@ -1,5 +1,5 @@
 <ul class="list-group list-group-flush">
     <li class="list-group-item" *ngFor="let season of seasons">
-      <a routerLink="/racelist/{{season.id}}">{{season.startDate | date:'yyyy-MM-dd'}} - {{season.endDate | date:'yyyy-MM-dd'}}: {{season.name}}</a>
+      <a routerLink="/season/{{season.id}}">{{season.startDate | date:'yyyy-MM-dd'}} - {{season.endDate | date:'yyyy-MM-dd'}}: {{season.name}}</a>
     </li>
   </ul>

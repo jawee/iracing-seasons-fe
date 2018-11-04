@@ -20,7 +20,6 @@ export class RaceListComponent implements OnInit {
 
   getRaces(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    
     this.raceDataService.getRacesForSeason(id).subscribe(races => this.races = races);
   }
 }

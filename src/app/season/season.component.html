@@ -1,0 +1,8 @@
+<ng-container *ngIf="season">
+  <h2>{{season.name}}</h2>
+  <p>Start date: <span>{{season.startDate | date:'yyyy-MM-dd'}}</span></p>
+  <p>End date: <span>{{season.endDate | date:'yyyy-MM-dd'}}</span></p>
+  
+  <h4>Races</h4>
+  <app-race-list></app-race-list>
+</ng-container>
