@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RaceComponent } from './race/race.component';
 
 @Component({
   selector: 'app-root',
