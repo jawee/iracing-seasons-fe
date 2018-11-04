@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { RaceDataService } from '../Service/race-data.service';
 import { Race } from '../Model/race';
 
@@ -10,13 +12,15 @@ import { Race } from '../Model/race';
 export class RaceListComponent implements OnInit {
   races: Race[];
 
-  constructor(private raceService: RaceDataService) { }
+  constructor(private route: ActivatedRoute, private raceDataService: RaceDataService, private location: Location) { }
 
   ngOnInit() {
     this.getRaces();
   }
 
   getRaces(): void {
-    this.raceService.getRaces().subscribe(races => this.races = races);
+    const id = +this.route.snapshot.paramMap.get('id');
+    
+    this.raceDataService.getRacesForSeason(id).subscribe(races => this.races = races);
   }
 }

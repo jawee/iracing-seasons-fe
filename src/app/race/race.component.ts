@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Race } from '../Model/race';
 import { RaceDataService } from '../Service/race-data.service';
-import { RaceRowComponent } from '../race-row/race-row.component';
 
 @Component({
   selector: 'app-race',

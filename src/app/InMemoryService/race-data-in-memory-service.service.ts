@@ -3,6 +3,388 @@ import { Race } from '../Model/race';
 
 export class RaceDataInMemoryServiceService implements InMemoryDbService {
   createDb() { 
+    const drivers = [
+        {
+          "id": 54,
+          "customerId": 233966,
+          "name": "Josef F�llgren",
+          "number": 10
+        },
+        {
+          "id": 55,
+          "customerId": 229541,
+          "name": "Carl E Jansson",
+          "number": 92
+        },
+        {
+          "id": 56,
+          "customerId": 155240,
+          "name": "Robin Sundkvist",
+          "number": 4
+        },
+        {
+          "id": 57,
+          "customerId": 143191,
+          "name": "Wilhelm Wiberg",
+          "number": 82
+        },
+        {
+          "id": 58,
+          "customerId": 292923,
+          "name": "Stellan Lindeberg",
+          "number": 968
+        },
+        {
+          "id": 59,
+          "customerId": 290742,
+          "name": "Magnus Vallstr�m",
+          "number": 666
+        },
+        {
+          "id": 60,
+          "customerId": 129837,
+          "name": "Tobias olsson2",
+          "number": 91
+        },
+        {
+          "id": 61,
+          "customerId": 37785,
+          "name": "Jonas Bodin",
+          "number": 177
+        },
+        {
+          "id": 62,
+          "customerId": 59177,
+          "name": "Andreas Olsson",
+          "number": 15
+        },
+        {
+          "id": 63,
+          "customerId": 138213,
+          "name": "Victor Dravegard",
+          "number": 23
+        },
+        {
+          "id": 64,
+          "customerId": 293441,
+          "name": "Andreas Dahlstr�m",
+          "number": 16
+        },
+        {
+          "id": 65,
+          "customerId": 246119,
+          "name": "Tomas Andersson",
+          "number": 34
+        },
+        {
+          "id": 66,
+          "customerId": 80693,
+          "name": "Mattias Norling",
+          "number": 36
+        },
+        {
+          "id": 67,
+          "customerId": 31968,
+          "name": "Tony Cederholm",
+          "number": 72
+        },
+        {
+          "id": 68,
+          "customerId": 287721,
+          "name": "Alejandro Leiro",
+          "number": 28
+        },
+        {
+          "id": 69,
+          "customerId": 266171,
+          "name": "Jonas Melin",
+          "number": 76
+        },
+        {
+          "id": 70,
+          "customerId": 41060,
+          "name": "Jonny Wermelin",
+          "number": 81
+        },
+        {
+          "id": 71,
+          "customerId": 290615,
+          "name": "Jonas Simonsson",
+          "number": 3
+        },
+        {
+          "id": 72,
+          "customerId": 124781,
+          "name": "Marcus Simonsson",
+          "number": 192
+        },
+        {
+          "id": 73,
+          "customerId": 91787,
+          "name": "Philip Johansson",
+          "number": 220
+        },
+        {
+          "id": 74,
+          "customerId": 52848,
+          "name": "Rickard Allardh",
+          "number": 74
+        },
+        {
+          "id": 75,
+          "customerId": 184439,
+          "name": "Mikael Engstr�m",
+          "number": 11
+        },
+        {
+          "id": 76,
+          "customerId": 140126,
+          "name": "Sebastian Witkowski",
+          "number": 704
+        },
+        {
+          "id": 77,
+          "customerId": 248617,
+          "name": "Anders Wallgren",
+          "number": 19
+        },
+        {
+          "id": 78,
+          "customerId": 231076,
+          "name": "Mikael Engstroem",
+          "number": 100
+        },
+        {
+          "id": 79,
+          "customerId": 159550,
+          "name": "Robert B Eriksson",
+          "number": 5
+        },
+        {
+          "id": 80,
+          "customerId": 216544,
+          "name": "Daniel Sollo",
+          "number": 215
+        },
+        {
+          "id": 81,
+          "customerId": 122653,
+          "name": "Joel Voxberg",
+          "number": 21
+        },
+        {
+          "id": 82,
+          "customerId": 47716,
+          "name": "Andreas Lewau",
+          "number": 123
+        },
+        {
+          "id": 83,
+          "customerId": 27595,
+          "name": "Martin Simonsson",
+          "number": 47
+        },
+        {
+          "id": 84,
+          "customerId": 140209,
+          "name": "Mats Sjoblom",
+          "number": 55
+        },
+        {
+          "id": 85,
+          "customerId": 298788,
+          "name": "H�kan �gren",
+          "number": 20
+        },
+        {
+          "id": 86,
+          "customerId": 230406,
+          "name": "Fredrik Stertman",
+          "number": 87
+        },
+        {
+          "id": 87,
+          "customerId": 331739,
+          "name": "Christopher Haverland",
+          "number": 175
+        },
+        {
+          "id": 88,
+          "customerId": 293407,
+          "name": "Pontus Nilsson",
+          "number": 79
+        },
+        {
+          "id": 89,
+          "customerId": 281548,
+          "name": "Oliver Silva Barrera",
+          "number": 43
+        },
+        {
+          "id": 90,
+          "customerId": 152964,
+          "name": "Nicklas Gr�ns",
+          "number": 17
+        },
+        {
+          "id": 91,
+          "customerId": 233357,
+          "name": "Ola S�rnkvist",
+          "number": 70
+        },
+        {
+          "id": 92,
+          "customerId": 210826,
+          "name": "Magnus Asp",
+          "number": 2
+        },
+        {
+          "id": 93,
+          "customerId": 108438,
+          "name": "Kent Suroto",
+          "number": 48
+        },
+        {
+          "id": 94,
+          "customerId": 278525,
+          "name": "Lars Rystedt",
+          "number": 99
+        },
+        {
+          "id": 95,
+          "customerId": 312061,
+          "name": "Albin Nystr�m",
+          "number": 310
+        },
+        {
+          "id": 96,
+          "customerId": 230212,
+          "name": "Anton Karlsson",
+          "number": 32
+        },
+        {
+          "id": 97,
+          "customerId": 175460,
+          "name": "Joakim Svensson",
+          "number": 119
+        },
+        {
+          "id": 98,
+          "customerId": 69293,
+          "name": "Robin Bandgren",
+          "number": 77
+        },
+        {
+          "id": 99,
+          "customerId": 305621,
+          "name": "Jhon Solarte",
+          "number": 8
+        },
+        {
+          "id": 100,
+          "customerId": 253695,
+          "name": "Tommy Lindkvist",
+          "number": 13
+        },
+        {
+          "id": 101,
+          "customerId": 143617,
+          "name": "Henrik Lindoff",
+          "number": 8
+        },
+        {
+          "id": 102,
+          "customerId": 175014,
+          "name": "Joachim Ljunggren",
+          "number": 64
+        },
+        {
+          "id": 103,
+          "customerId": 319276,
+          "name": "Harri Kjellin",
+          "number": 75
+        },
+        {
+          "id": 104,
+          "customerId": 324435,
+          "name": "Philip Larsson",
+          "number": 18
+        },
+        {
+          "id": 105,
+          "customerId": 76416,
+          "name": "Peter Johansson",
+          "number": 62
+        },
+        {
+          "id": 106,
+          "customerId": 272595,
+          "name": "Tommie Aalto",
+          "number": 24
+        },
+        {
+          "id": 107,
+          "customerId": 230647,
+          "name": "Michael Haflidason",
+          "number": 811
+        },
+        {
+          "id": 108,
+          "customerId": 179485,
+          "name": "Daniel �hrn",
+          "number": 14
+        },
+        {
+          "id": 109,
+          "customerId": 209962,
+          "name": "Linus Areng",
+          "number": 33
+        },
+        {
+          "id": 110,
+          "customerId": 131717,
+          "name": "Fredrik Neptun",
+          "number": 7
+        },
+        {
+          "id": 111,
+          "customerId": 315937,
+          "name": "Timmy Nylander",
+          "number": 456
+        },
+        {
+          "id": 112,
+          "customerId": 64920,
+          "name": "TK Yasagac",
+          "number": 321
+        }
+      ]
+    const seasons = [
+        {
+          "id": 4,
+          "name": "Season 01",
+          "startDate": "2018-10-02T08:00:00",
+          "endDate": "2018-12-31T08:00:00",
+          "races": [
+            {
+              "id": 8,
+              "track": "Phillip Island Circui",
+              "seasonId": 4,
+              "raceNumber": 1,
+              "raceType": 0,
+              "raceRows": null
+            },
+            {
+              "id": 9,
+              "track": "Suzuka International Racing Course - Grand Prix",
+              "seasonId": 4,
+              "raceNumber": 2,
+              "raceType": 2,
+              "raceRows": null
+            }
+          ]
+        }
+      ]
     const races = [
       {
           "id": 8,
@@ -1247,7 +1629,7 @@ export class RaceDataInMemoryServiceService implements InMemoryDbService {
           ]
       }
   ];
-    return {races};
+    return {seasons, races, drivers};
   }
   constructor() { }
 }

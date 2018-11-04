@@ -12,5 +12,5 @@ export class RaceRow {
 
     constructor(values: Object = {}) {
         Object.assign(this, values);
-      }
+    }
 }

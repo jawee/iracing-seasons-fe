@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RaceRow } from '../Model/race-row';
+import { DriverDataService } from '../driver-data.service';
+import { Driver } from '../Model/driver';
 
 @Component({
   selector: '[app-race-row]',
@@ -8,9 +10,17 @@ import { RaceRow } from '../Model/race-row';
 })
 export class RaceRowComponent implements OnInit {
   @Input() raceRow: RaceRow;
-  constructor() { }
+
+  driver: Driver;
+
+  constructor(private driverService: DriverDataService) { }
 
   ngOnInit() {
+    this.getDriver();
+  }
+
+  getDriver(): void {
+    this.driverService.getDriver(this.raceRow.driverId).subscribe(driver => this.driver = driver);
   }
 
 }

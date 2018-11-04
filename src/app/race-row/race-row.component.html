@@ -1,9 +1,11 @@
-<td contenteditable="true">{{raceRow.id}}</td>
-<td contenteditable="true">{{raceRow.driverId}}</td>
-<td contenteditable="true">{{raceRow.car}}</td>
-<td contenteditable="true">{{raceRow.position}}</td>
-<td contenteditable="true">{{raceRow.startPosition}}</td>
-<td contenteditable="true">{{raceRow.incidents}}</td>
-<td contenteditable="true">{{raceRow.points}}</td>
-<td contenteditable="true">{{raceRow.infractionPoints}}</td>
-<td contenteditable="true">{{raceRow.penaltyPoints}}</td>
+<ng-container *ngIf="raceRow">
+    <td contenteditable="true">{{raceRow.id}}</td>
+    <td contenteditable="true">{{driver.name}}</td>
+    <td contenteditable="true">{{raceRow.car}}</td>
+    <td contenteditable="true">{{raceRow.position}}</td>
+    <td contenteditable="true">{{raceRow.startPosition}}</td>
+    <td contenteditable="true">{{raceRow.incidents}}</td>
+    <td contenteditable="true">{{raceRow.points}}</td>
+    <td contenteditable="true">{{raceRow.infractionPoints}}</td>
+    <td contenteditable="true">{{raceRow.penaltyPoints}}</td>
+</ng-container>

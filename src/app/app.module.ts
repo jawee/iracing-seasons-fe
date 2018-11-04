@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { RaceComponent } from './race/race.component';
 import { RaceListComponent } from './race-list/race-list.component';
 import { RaceRowComponent } from './race-row/race-row.component';
+import { SeasonListComponent } from './season-list/season-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RaceComponent,
     RaceListComponent,
-    RaceRowComponent
+    RaceRowComponent,
+    SeasonListComponent
   ],
   imports: [
     BrowserModule,

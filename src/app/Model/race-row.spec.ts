@@ -7,16 +7,16 @@ describe('RaceRow', () => {
 
   it('should accept values in the constructor', () => {
     let raceRow = new RaceRow({
-      Id: 1,
-      Car: 'Ferrari',
-      StartPosition: 1,
-      Incidents: 0,
-      Points: 100,
-      InfractionPoints: 0,
-      PenaltyPoints: 0
+      id: 1,
+      car: 'Ferrari',
+      startPosition: 1,
+      incidents: 0,
+      points: 100,
+      infractionPoints: 0,
+      penaltyPoints: 0
     });
 
-    expect(raceRow.Id).toEqual(1);
-    expect(raceRow.Car).toEqual('Ferrari');
+    expect(raceRow.id).toEqual(1);
+    expect(raceRow.car).toEqual('Ferrari');
   });
 });
