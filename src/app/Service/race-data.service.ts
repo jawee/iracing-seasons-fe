@@ -21,6 +21,13 @@ export class RaceDataService {
     return this.http.get<Race[]>(this.racesUrl).pipe(catchError(this.handleError('getRaces', [])))
   }
 
+  getRace(id: number): Observable<Race> {
+    const url = this.racesUrl + '/' + id;
+    return this.http.get<Race>(url).pipe(
+      catchError(this.handleError<Race>('getRace id=${id}'))
+    );
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
  

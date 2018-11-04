@@ -8,6 +8,7 @@ export class RaceRow {
     infractionPoints: number;
     penaltyPoints: number;
     driver: string;
+    driverId: number;
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

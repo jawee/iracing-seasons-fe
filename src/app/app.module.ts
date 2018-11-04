@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RaceComponent } from './race/race.component';
 import { RaceListComponent } from './race-list/race-list.component';
+import { RaceRowComponent } from './race-row/race-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RaceComponent,
-    RaceListComponent
+    RaceListComponent,
+    RaceRowComponent
   ],
   imports: [
     BrowserModule,

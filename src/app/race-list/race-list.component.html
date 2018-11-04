@@ -1,3 +1,5 @@
-<ul>
-  <li *ngFor="let race of races">{{race.raceNumber}} - {{race.track}}</li>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let race of races">
+    <a routerLink="/race/{{race.id}}">{{race.raceNumber}} - {{race.track}}</a>
+  </li>
 </ul>
