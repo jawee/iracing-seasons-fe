@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { SeasonDataService } from '../season-data.service';
+import { SeasonDataService } from '../Service/season-data.service';
 import { Season } from '../Model/season';
 
 

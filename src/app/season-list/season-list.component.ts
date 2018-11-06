@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SeasonDataService } from '../season-data.service';
+import { SeasonDataService } from '../Service/season-data.service';
 import { Season } from '../Model/season';
 
 @Component({

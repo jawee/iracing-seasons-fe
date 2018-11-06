@@ -22,7 +22,7 @@ export class RaceDataService {
   }
 
   getRacesForSeason(id: number): Observable<Race[]> {
-    const url = this.racesUrl + '?seasonId=' + id;
+    const url = this.racesUrl + "/getracesforseasonid" + '?seasonId=' + id;
     return this.http.get<Race[]>(url).pipe(
       catchError(this.handleError<Race[]>('getRacesForSeason id=${id}'))
     );

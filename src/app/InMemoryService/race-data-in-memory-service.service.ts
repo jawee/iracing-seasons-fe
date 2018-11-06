@@ -1,5 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { Driver } from '../Model/driver';
 import { Race } from '../Model/race';
+import { Season } from '../Model/season';
 
 export class RaceDataInMemoryServiceService implements InMemoryDbService {
   createDb() { 
@@ -1692,5 +1694,10 @@ export class RaceDataInMemoryServiceService implements InMemoryDbService {
   ];
     return {seasons, races, drivers, standings};
   }
-  constructor() { }1
+  constructor() { }
+
+  genId<T extends Driver | Season | Race>(myTable: T[]): number {
+    console.log("Creating id for new element");
+    return myTable.length > 0 ? Math.max(...myTable.map(t => t.id)) + 1 : 11;
+  }
 }

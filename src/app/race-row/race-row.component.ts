@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RaceRow } from '../Model/race-row';
-import { DriverDataService } from '../driver-data.service';
+import { DriverDataService } from '../Service/driver-data.service';
 import { Driver } from '../Model/driver';
 
 @Component({

@@ -5,7 +5,7 @@ export class Race {
     track: string;
     seasonId: number;
     raceNumber: number;
-    raceYype: number;
+    raceType: number;
     raceRows: Array<RaceRow>;
 
     constructor(values: Object = {}) {
