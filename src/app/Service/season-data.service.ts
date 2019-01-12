@@ -18,7 +18,7 @@ export class SeasonDataService {
   constructor(private http: HttpClient) { }
 
   getSeasons(): Observable<Season[]> {
-    return this.http.get<Season[]>(this.seasonsUrl).pipe(catchError(this.handleError('getSeasons', [])))
+    return this.http.get<Season[]>(this.seasonsUrl).pipe(catchError(this.handleError('getSeasons', [])));
   }
 
   getSeason(id: number): Observable<Season> {
@@ -29,8 +29,9 @@ export class SeasonDataService {
   }
 
   addSeason (season: Season): Observable<Season> {
-    console.log("Adding season: ", season);
+    console.log('Adding season: ', season);
     return this.http.post<Season>(this.seasonsUrl, season, httpOptions).pipe(
+      // tslint:disable-next-line:no-shadowed-variable
       tap((season: Season) => this.log(`added season w/ id=${season.id}`)),
       catchError(this.handleError<Season>('addSeason'))
     );
@@ -38,10 +39,9 @@ export class SeasonDataService {
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
- 
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
-      
+
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
