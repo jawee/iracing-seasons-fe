@@ -15,6 +15,7 @@ import { SeasonListComponent } from './season-list/season-list.component';
 import { SeasonComponent } from './season/season.component';
 import { CreateSeasonComponent } from './create-season/create-season.component';
 import { RequestInterceptor } from './http-interceptors/RequestInterceptor';
+import { SeasonResultsComponent } from './season-results/season-results.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RequestInterceptor } from './http-interceptors/RequestInterceptor';
     RaceRowComponent,
     SeasonListComponent,
     SeasonComponent,
-    CreateSeasonComponent
+    CreateSeasonComponent,
+    SeasonResultsComponent
   ],
   imports: [
     BrowserModule,

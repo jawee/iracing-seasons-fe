@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { PointScoring } from '../Model/point-scoring';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
 };
 
 @Injectable({
@@ -17,6 +17,8 @@ export class PointScoringDataService {
 
   getPointsForSeason(id: number): Observable<PointScoring[]> {
     const input = { SeasonId: id};
-    return this.http.post<PointScoring[]>(this.pointScoringUrl, input, httpOptions);
+    const body = new URLSearchParams();
+    body.set('SeasonId', id.toString());
+    return this.http.post<PointScoring[]>(this.pointScoringUrl + '/GetPointsForSeason', body.toString(), httpOptions);
   }
 }
