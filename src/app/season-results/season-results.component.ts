@@ -19,7 +19,8 @@ export class SeasonResultsComponent implements OnInit {
 
   getResults(): void {
     const id = + this.route.snapshot.paramMap.get('id');
-    this.pointScoringDataService.getPointsForSeason(id).subscribe(pointScorings => this.pointScorings = pointScorings);
+    // tslint:disable-next-line:max-line-length
+    this.pointScoringDataService.getPointsForSeason(id).subscribe(pointScorings => this.pointScorings = pointScorings, error => console.error(error), () => console.log(this.pointScorings));
   }
 
 }
